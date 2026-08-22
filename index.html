@@ -327,7 +327,7 @@
 </header>
 
 <div class="hero">
-  <h1>Des légumes cueillis cette semaine, livrés chez vous le lendemain.</h1>
+  <h1>Des légumes cueillis cette semaine, chez vous le lendemain.</h1>
   <p>Panier bio composé selon la récolte de la ferme, sans intermédiaire. Choisissez votre taille, on s'occupe du reste.</p>
   <a href="#paniers" class="btn">Voir les paniers</a>
 </div>
@@ -382,11 +382,13 @@
         </select>
       </div>
       <div>
-        <label for="jour">Jour de retrait / livraison</label>
+        <label for="jour">Jour de retrait</label>
         <select id="jour" required>
           <option value="">— Sélectionner —</option>
           <option>Mardi</option>
+           <option>Mercredi</option>
           <option>Jeudi</option>
+           <option>Vendredi</option>
           <option>Samedi</option>
         </select>
       </div>
@@ -394,8 +396,8 @@
       <fieldset class="field-full">
         <legend>Fréquence</legend>
         <div class="radio-row">
-          <label><input type="radio" name="freq" value="hebdo" checked> Chaque semaine</label>
-          <label><input type="radio" name="freq" value="quinzaine"> Une semaine sur deux</label>
+          <label><input type="radio" name="freq" value="hebdo" checked> Chaque semaine/mois</label>
+          <label><input type="radio" name="freq" value="quinzaine"> Une semaine sur deux/mois</label>
           <label><input type="radio" name="freq" value="unique"> Une seule fois</label>
         </div>
       </fieldset>
@@ -411,7 +413,7 @@
 </section>
 
 <footer>
-  Ferme du Vallon Vert · Prototype de démonstration · Coordonnées et mentions légales à compléter
+  Ferme du Vallon Vert · Coordonnées et mentions légales
 </footer>
 
 <script>
