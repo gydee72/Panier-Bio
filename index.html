@@ -172,6 +172,8 @@
     position: relative;
     box-shadow: 0 6px 0 rgba(74,51,36,0.15);
     transition: transform .15s ease;
+    display: flex;
+    flex-direction: column;
   }
   .crate:hover { transform: translateY(-4px); }
 
@@ -204,10 +206,11 @@
     padding-left: 18px;
     color: #4a4735;
     font-size: 0.92rem;
+    flex-grow: 1;
   }
   .crate ul li { margin-bottom: 4px; }
 
-  .crate .btn { width: 100%; text-align: center; background: var(--wood); color: var(--paper); box-shadow: 0 3px 0 var(--wood-dark); }
+  .crate .btn { width: 100%; text-align: center; background: var(--wood); color: var(--paper); box-shadow: 0 3px 0 var(--wood-dark); margin-top: auto; }
   .crate .btn:hover { background: var(--wood-dark); }
 
   .weekly-note {
@@ -327,7 +330,7 @@
 </header>
 
 <div class="hero">
-  <h1>Des légumes cueillis cette semaine, chez vous le lendemain.</h1>
+  <h1>Des légumes cueillis cette semaine, livrés chez vous le lendemain.</h1>
   <p>Panier bio composé selon la récolte de la ferme, sans intermédiaire. Choisissez votre taille, on s'occupe du reste.</p>
   <a href="#paniers" class="btn">Voir les paniers</a>
 </div>
@@ -438,21 +441,21 @@
       nom: "Petit panier",
       prix: "14 €",
       pourQui: "1 à 2 personnes",
-      contenu: ["Carottes", "Salade", "Courgettes", "Haricot", "Oignons"]
+      contenu: ["Carottes", "Salade", "Courgettes", "Pommes", "Oignons"]
     },
     {
       id: "familial",
       nom: "Panier familial",
       prix: "24 €",
       pourQui: "3 à 4 personnes",
-      contenu: ["Carottes", "Salade", "Courgettes", "haricot", "Oignons", "Tomates", "Poireaux"]
+      contenu: ["Carottes", "Salade", "Courgettes", "Pommes", "Oignons", "Tomates", "Poireaux"]
     },
     {
       id: "grand",
       nom: "Grand panier",
       prix: "34 €",
       pourQui: "5 personnes et +",
-      contenu: ["Carottes", "Salade", "Courgettes", "Haricot", "Oignons", "Tomates", "Poireaux", "Pommes de terre", "Poivrons"]
+      contenu: ["Carottes", "Salade", "Courgettes", "Pommes", "Oignons", "Tomates", "Poireaux", "Pommes de terre", "Poires"]
     }
   ];
 
