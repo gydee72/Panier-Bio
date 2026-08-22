@@ -327,7 +327,7 @@
 </header>
 
 <div class="hero">
-  <h1>Des légumes cueillis cette semaine, chez vous le lendemain.</h1>
+  <h1>Des légumes cueillis cette semaine, livrés chez vous le lendemain.</h1>
   <p>Panier bio composé selon la récolte de la ferme, sans intermédiaire. Choisissez votre taille, on s'occupe du reste.</p>
   <a href="#paniers" class="btn">Voir les paniers</a>
 </div>
@@ -382,13 +382,11 @@
         </select>
       </div>
       <div>
-        <label for="jour">Jour de retrait</label>
+        <label for="jour">Jour de retrait / livraison</label>
         <select id="jour" required>
           <option value="">— Sélectionner —</option>
           <option>Mardi</option>
-           <option>Mercredi</option>
           <option>Jeudi</option>
-           <option>Vendredi</option>
           <option>Samedi</option>
         </select>
       </div>
@@ -396,8 +394,8 @@
       <fieldset class="field-full">
         <legend>Fréquence</legend>
         <div class="radio-row">
-          <label><input type="radio" name="freq" value="hebdo" checked> Chaque semaine/mois</label>
-          <label><input type="radio" name="freq" value="quinzaine"> Une semaine sur deux/mois</label>
+          <label><input type="radio" name="freq" value="hebdo" checked> Chaque semaine</label>
+          <label><input type="radio" name="freq" value="quinzaine"> Une semaine sur deux</label>
           <label><input type="radio" name="freq" value="unique"> Une seule fois</label>
         </div>
       </fieldset>
@@ -413,7 +411,7 @@
 </section>
 
 <footer>
-  Ferme du Vallon Vert · Coordonnées et mentions légales
+  Ferme du Vallon Vert · Prototype de démonstration · Coordonnées et mentions légales à compléter
 </footer>
 
 <script>
@@ -491,12 +489,12 @@
 
   /*
     -----------------------------------------------------------
-    SOUMISSION DU FORMULAIRE (démonstration)
-    Dans une vraie version, on enverrait simplement ces données à
-    Supabase pour que le fermier les retrouve dans son espace admin :
-      await supabase.from('commandes').insert({ nom, email, panier_id, jour, frequence })
-    Pas besoin de Stripe ici : le paiement se fait à la remise du
-    panier, donc aucune intégration de paiement en ligne n'est requise.
+    SOUMISSION DU FORMULAIRE
+    Chaque commande valide est envoyée par e-mail au fermier via
+    Web3Forms (aucune base de données nécessaire pour ce besoin).
+    Pas besoin de Stripe non plus : le paiement se fait à la
+    remise du panier, donc aucune intégration de paiement en
+    ligne n'est requise.
     -----------------------------------------------------------
   */
   document.getElementById('orderForm').addEventListener('submit', async (e) => {
@@ -510,7 +508,7 @@
 
     const box = document.getElementById('confirmation');
     const submitBtn = e.target.querySelector('button[type="submit"]');
-    const clePresente = WEB3FORMS_ACCESS_KEY.startsWith("53fcfbfb-67c6-405e-8d09-5a6920bf93de") === false;
+    const clePresente = WEB3FORMS_ACCESS_KEY.startsWith("COLLEZ_") === false;
 
     if (clePresente) {
       // Envoi réel de l'e-mail au fermier via Web3Forms
